@@ -8,10 +8,16 @@ using UnityEngine.Purchasing;
 public class IAPKey
 {
     public const string PACK_UNLOCK = "unlock";
-    public const string PACK1 = "add100_baby";
-    public const string PACK2 = "add200_baby";
-    public const string PACK3 = "add500_baby";
-    public const string PACK4 = "add1000_baby";
+    public const string PACK1 = "game81_add100_baby";
+    public const string PACK2 = "game81_add200_baby";
+    public const string PACK3 = "game81_add500_baby";
+    public const string PACK4 = "game81_add1000_baby";
+    
+    public const string PACK1_REGISTER = "game81_register_1";
+    public const string PACK2_REGISTER = "game81_register_2";
+    public const string PACK3_REGISTER = "game81_register_3";
+    public const string PACK4_REGISTER = "game81_register_4";
+    public const string PACK5_REGISTER = "game81_register_4";
 }
 
 public class IAPManager : PersistentSingleton<IAPManager>, IStoreListener
@@ -43,6 +49,12 @@ public class IAPManager : PersistentSingleton<IAPManager>, IStoreListener
         builder.AddProduct(IAPKey.PACK2, ProductType.Consumable);
         builder.AddProduct(IAPKey.PACK3, ProductType.Consumable);
         builder.AddProduct(IAPKey.PACK4, ProductType.Consumable);
+        builder.AddProduct(IAPKey.PACK1_REGISTER, ProductType.Subscription);
+        builder.AddProduct(IAPKey.PACK2_REGISTER, ProductType.Subscription);
+        builder.AddProduct(IAPKey.PACK3_REGISTER, ProductType.Subscription);
+        builder.AddProduct(IAPKey.PACK4_REGISTER, ProductType.Subscription);
+        builder.AddProduct(IAPKey.PACK5_REGISTER, ProductType.Subscription);
+        
         UnityPurchasing.Initialize(this, builder);
     }
     private void InitIAP()

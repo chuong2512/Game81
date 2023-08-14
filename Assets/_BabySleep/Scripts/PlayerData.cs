@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Constant
@@ -25,10 +26,30 @@ public class PlayerData : BaseData
     }
 
 
+    public long time;
+    public string timeRegister;
+
+    public void SetTimeRegister(long timeSet)
+    {
+        timeRegister = DateTime.Now.ToBinary().ToString();
+        time = timeSet;
+        Save();
+    }
+
+    public void ResetTime()
+    {
+        time = 0;
+        Save();
+    }
+
     public override void ResetData()
     {
         intDiamond = 0;
         currentSong = 0;
+        timeRegister = DateTime.Now.ToBinary().ToString();
+        time = 7 * 24 * 60 * 60;
+
+        
         listSongs = new bool[Constant.countSong];
 
         for (int i = 0; i < 8; i++)
