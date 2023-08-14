@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class TimeControl : MonoBehaviour
 {
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
@@ -13,13 +13,7 @@ public class Timer : MonoBehaviour
         timerIsRunning = false;
     }
 
-    public void Stop()
-    {
-        AudioManager.Instance.musicSource.Stop();
-        timeText.gameObject.SetActive(false);
-        timeRemaining = 0;
-        timerIsRunning = false;
-    }
+
 
     void Update()
     {
@@ -28,7 +22,7 @@ public class Timer : MonoBehaviour
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                DisplayTime(timeRemaining);
+                DisTime(timeRemaining);
             }
             else
             {
@@ -39,18 +33,26 @@ public class Timer : MonoBehaviour
             }
         }
     }
+    
+    public void Stop()
+    {
+        AudioManager.Instance.musicSource.Stop();
+        timeText.gameObject.SetActive(false);
+        timeRemaining = 0;
+        timerIsRunning = false;
+    }
 
-    public void SetTimer(float timeToDisplay)
+    public void SetTimeInGame(float timeToDisplay)
     {
         AudioManager.Instance.musicSource.Play();
         timeText.gameObject.SetActive(true);
         timerIsRunning = true;
         timeRemaining = timeToDisplay;
 
-        DisplayTime(timeToDisplay);
+        DisTime(timeToDisplay);
     }
 
-    void DisplayTime(float timeToDisplay)
+    void DisTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         float hours = Mathf.FloorToInt(timeToDisplay / 60 / 60);

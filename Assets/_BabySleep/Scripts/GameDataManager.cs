@@ -1,12 +1,13 @@
 using Jackal;
 using MyNamespace;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [DefaultExecutionOrder(-100)]
 public class GameDataManager : PersistentSingleton<GameDataManager>
 {
     /*----Scriptable data-----------------------------------------------------------------------------------------------*/
-    public SongSO songSo;
+    [FormerlySerializedAs("songSo")] public SongInfoSO songInfoSo;
 
     /*----Data variable-------------------------------------------------------------------------------------------------*/
     [HideInInspector] public PlayerData playerData;

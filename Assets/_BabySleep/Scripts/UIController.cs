@@ -3,19 +3,21 @@ namespace MyNamespace
     using Jackal;
     using UnityEngine;
 
-    public class UIManager : Singleton<UIManager>
+    public class UIController : Singleton<UIController>
     {
         public GameObject panelStart, panelApp;
 
-        void Start()
-        {
-            OpenApp();
-        }
-
+        
         public void OpenApp()
         {
             panelStart.SetActive(false);
             panelApp.SetActive(true);
         }
+        
+        void Start()
+        {
+            OpenApp();
+        }
+
     }
 }

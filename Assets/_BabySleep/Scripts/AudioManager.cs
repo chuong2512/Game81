@@ -1,3 +1,5 @@
+using UnityEngine.Serialization;
+
 namespace MyNamespace
 {
     using Jackal;
@@ -8,12 +10,12 @@ namespace MyNamespace
     public class AudioManager : Singleton<AudioManager>
     {
         public AudioSource musicSource;
-        private SongSO _songSo;
-
-        public Timer timer;
+        private SongInfoSO _songInfoSo;
 
         public Image image;
         public Sprite iconOn, iconOff;
+        
+        [FormerlySerializedAs("timer")] public TimeControl timeControl;
 
 
         public void Stop()
@@ -31,7 +33,7 @@ namespace MyNamespace
             if (musicSource.isPlaying)
             {
                 musicSource.Stop();
-                timer.Stop();
+                timeControl.Stop();
             }
             else
             {
@@ -55,7 +57,7 @@ namespace MyNamespace
         {
             base.Awake();
 
-            _songSo = GameDataManager.Instance.songSo;
+            _songInfoSo = GameDataManager.Instance.songInfoSo;
             musicSource.loop = true;
         }
 
@@ -66,7 +68,7 @@ namespace MyNamespace
 
         public void PlaySong(int id)
         {
-            musicSource.clip = _songSo.GetSongWithID(id).song;
+            musicSource.clip = _songInfoSo.GetSongWithID(id).song;
             musicSource.Play();
         }
 

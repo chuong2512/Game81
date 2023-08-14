@@ -20,12 +20,10 @@ namespace Jackal
 			{
 				if (_instance == null)
 				{
-					_instance = FindObjectOfType<T> ();
+					_instance = FindObjectOfType<T>();
 					if (_instance == null)
 					{
-						GameObject obj = new GameObject (typeof(T).Name);
-						//obj.hideFlags = HideFlags.HideAndDontSave;
-						_instance = obj.AddComponent<T> ();
+						_instance = new GameObject(typeof(T).Name).AddComponent<T>();
 					}
 				}
 				return _instance;

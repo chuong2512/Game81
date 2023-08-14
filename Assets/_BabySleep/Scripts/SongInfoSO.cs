@@ -5,7 +5,7 @@
     using UnityEngine;
 
     [CreateAssetMenu(fileName = "Songs ", menuName = "Data/Scriptable Object/Song Infor SO")]
-    public class SongSO : ScriptableObject
+    public class SongInfoSO : ScriptableObject
     {
         public List<SongInfor> songInfors;
 
