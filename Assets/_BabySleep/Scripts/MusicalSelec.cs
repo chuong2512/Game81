@@ -2,7 +2,7 @@ using MyNamespace;
 using TMPro;
 using UnityEngine;
 
-public class MusicSelector : MonoBehaviour
+public class MusicalSelec : MonoBehaviour
 {
     private PlayerData playerData; //todo delete
     private GameDataManager gameData; //todo delete
@@ -10,7 +10,7 @@ public class MusicSelector : MonoBehaviour
     public GameObject inApp;
 
     public int currentMusic;
-    public MusicItem[] musicItems;
+    public MusicalInstrument[] musicItems;
 
     void OnEnable()
     {
@@ -31,7 +31,7 @@ public class MusicSelector : MonoBehaviour
     {
         for (int i = 0; i < musicItems.Length; i++)
         {
-            musicItems[i].Init(gameData.songSo.GetSongWithID(i).icon, i, this);
+            musicItems[i].Init(gameData.songInfoSo.GetSongWithID(i).icon, i, this);
 
             if (playerData.listSongs[i])
             {
@@ -40,14 +40,14 @@ public class MusicSelector : MonoBehaviour
         }
     }
 
-    public void ChooseMusic(int index)
+    public void ChooseMusicToPlay(int index)
     {
         if (currentMusic == index)
         {
             return;
         }
 
-        if (playerData.listSongs[index] == false)
+        if (!playerData.listSongs[index])
         {
             if (!playerData.CheckCanUnlock())
             {
@@ -55,7 +55,7 @@ public class MusicSelector : MonoBehaviour
                 return;
             }
 
-            UnlockSkin(index);
+            UnlockSkinHEHE(index);
         }
 
         if (currentMusic > -1)
@@ -70,7 +70,7 @@ public class MusicSelector : MonoBehaviour
         AudioManager.Instance.PlaySong(currentMusic);
     }
 
-    public void UnlockSkin(int index)
+    public void UnlockSkinHEHE(int index)
     {
         if (!playerData.listSongs[index])
         {

@@ -136,7 +136,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -417,7 +417,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3192,7 +3192,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3338,7 +3338,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3889,7 +3889,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4088,7 +4088,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4369,7 +4369,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4515,7 +4515,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1670040468720716036}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: SetTimer
+        m_MethodName: SetTimeInGame
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
